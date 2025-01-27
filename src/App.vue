@@ -1,6 +1,12 @@
 <template>
   <div id="app">
     <NavbarComponent />
+    <div class="hero-section">
+  <div class="hero-overlay">
+    <h1>Welcome to RecipeApp</h1>
+    <p>Explore delicious recipes for every occasion</p>
+  </div>
+</div>
     <div class="container">
       <RecipeList :recipes="recipes" />
     </div>
@@ -90,6 +96,23 @@ export default {
 </script>
 
 <style>
+.hero-section {
+  background-image: url('@/assets/knifebackground.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  border-radius: 10px;
+}
 body {
   background-color: #f8f9fa;
   margin: 0;

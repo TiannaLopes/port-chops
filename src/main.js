@@ -8,7 +8,5 @@ import 'bootstrap';
 // Creating Vue App
 const app = createApp(App);
 
-
-
 // Mount App
 app.mount('#app');

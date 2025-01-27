@@ -40,4 +40,9 @@ export default {
 .navbar-brand {
   font-weight: bold;
 }
+
+.navbar {
+
+  color: white; 
+}
 </style>
