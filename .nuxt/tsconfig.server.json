@@ -54,7 +54,7 @@
         "../node_modules/@unhead/vue"
       ],
       "@nuxt/devtools": [
-        "../node_modules/nuxt/node_modules/@nuxt/devtools"
+        "../node_modules/@nuxt/devtools"
       ],
       "@vue/runtime-core": [
         "../node_modules/@vue/runtime-core"
@@ -72,7 +72,7 @@
         "../node_modules/nuxt"
       ],
       "vite/client": [
-        "../node_modules/nuxt/node_modules/vite/client"
+        "../node_modules/vite/client"
       ],
       "#shared": [
         "../shared"
@@ -115,8 +115,6 @@
     "./types/nitro-nuxt.d.ts",
     "../node_modules/runtime/server",
     "../node_modules/dist/runtime/server",
-    "../node_modules/nuxt/node_modules/runtime/server",
-    "../node_modules/nuxt/node_modules/dist/runtime/server",
     "../shared/**/*.d.ts",
     "./types/nitro.d.ts",
     "../**/*",
@@ -127,7 +125,7 @@
     "../node_modules/nuxt/node_modules",
     "../node_modules/@nuxtjs/tailwindcss/node_modules",
     "../node_modules/@nuxtjs/google-fonts/node_modules",
-    "../node_modules/nuxt/node_modules/@nuxt/devtools/node_modules",
+    "../node_modules/@nuxt/devtools/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
     "../dist"
   ]

@@ -387,47 +387,47 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-CWX62W-Z.mjs')
+    component: () => import('./index-BMgLFvd3.mjs')
   },
   {
     name: "learn",
     path: "/learn",
-    component: () => import('./learn-C5FN1ofN.mjs')
+    component: () => import('./learn-Bxl_QbkI.mjs')
   },
   {
     name: "login",
     path: "/login",
-    component: () => import('./login-FdJSf19Y.mjs')
+    component: () => import('./login-C9zN77nI.mjs')
   },
   {
     name: "media",
     path: "/media",
-    component: () => import('./media-ebG_9M7G.mjs')
+    component: () => import('./media-BSukaKFA.mjs')
   },
   {
     name: "signup",
     path: "/signup",
-    component: () => import('./signup-C0zBey7-.mjs')
+    component: () => import('./signup-D9NVYyJr.mjs')
   },
   {
     name: "contact",
     path: "/contact",
-    component: () => import('./contact-w98auObr.mjs')
+    component: () => import('./contact-BUh0Cksu.mjs')
   },
   {
     name: "recipes",
     path: "/recipes",
-    component: () => import('./recipes-DPR7--Ji.mjs')
+    component: () => import('./recipes-DCZ2bgOg.mjs')
   },
   {
     name: "cultural",
     path: "/cultural",
-    component: () => import('./cultural-DQzrzgJR.mjs')
+    component: () => import('./cultural-D8JvVpDm.mjs')
   },
   {
     name: "dashboard",
     path: "/dashboard",
-    component: () => import('./dashboard-CXrq7rlb.mjs')
+    component: () => import('./dashboard-C0SmsQm3.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -776,7 +776,7 @@ const plugins = [
   components_plugin_z4hgvsiddfKkfXTP6M8M4zG5Cb7sGnDhcryKVM45Di4
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-3_GfD__E.mjs').then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-Dq1Izzej.mjs').then((m) => m.default || m))
 };
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",
@@ -1042,8 +1042,8 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-CN3XuTGR.mjs'));
-    const _Error = defineAsyncComponent(() => import('./error-500-D0DSNpEV.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-CUWQs2kx.mjs'));
+    const _Error = defineAsyncComponent(() => import('./error-500-DAJWKx4c.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ statusCode: unref(statusCode), statusMessage: unref(statusMessage), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
