@@ -13,6 +13,11 @@ export default defineEventHandler(async (event) => {
       })
     }
 
+    // Sanitize lessonTitle - ensure it's a string and limit length
+    const sanitizedLessonTitle = typeof lessonTitle === 'string' 
+      ? lessonTitle.trim().substring(0, 200) 
+      : ''
+
     // Save progress
     const progressData = await progressOperations.saveProgress(userId, lessonId, {
       progress: progress || 0,
@@ -49,7 +54,7 @@ export default defineEventHandler(async (event) => {
           
           // Log activity
           await activityOperations.logActivity(userId, 'lesson_complete', {
-            title: `Completed: ${lessonTitle || lessonId}`,
+            title: `Completed: ${sanitizedLessonTitle || lessonId}`,
             description: `Scored ${score || 100}% on this lesson`,
             points: pointsEarned,
             metadata: { lessonId, score }

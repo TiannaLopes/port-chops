@@ -143,7 +143,12 @@
 
           <!-- Achievements -->
           <div class="card p-6">
-            <h2 class="text-xl font-bold text-breezeway-800 mb-4">Achievements</h2>
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="text-xl font-bold text-breezeway-800">Achievements</h2>
+              <NuxtLink to="/achievements" class="text-sm text-breezeway-600 hover:text-breezeway-700 font-medium">
+                View All
+              </NuxtLink>
+            </div>
             <div v-if="achievements.length > 0" class="space-y-2">
               <div v-for="achievement in achievements.slice(0, 6)" :key="achievement.id" class="flex items-center justify-between p-2 rounded-lg" :class="achievement.earned ? 'bg-breezeway-50' : 'bg-gray-50'">
                 <p class="text-sm font-semibold" :class="achievement.earned ? 'text-breezeway-900' : 'text-gray-400'">

@@ -26,10 +26,18 @@
           </span>
         </div>
       </div>
-      <div v-if="achievement.earned" class="shrink-0">
-        <span class="text-xs font-semibold px-2 py-1 rounded bg-garden-500 text-white">
+      <div class="shrink-0 flex items-center gap-2">
+        <span v-if="achievement.earned" class="text-xs font-semibold px-2 py-1 rounded bg-garden-500 text-white">
           Earned
         </span>
+        <button 
+          v-if="achievement.earned && showShare"
+          @click="handleShare"
+          class="text-breezeway-600 hover:text-breezeway-800 text-sm font-medium px-2 py-1 rounded hover:bg-breezeway-50 transition-colors"
+          title="Share achievement"
+        >
+          Share
+        </button>
       </div>
     </div>
   </div>
@@ -47,6 +55,10 @@ const props = defineProps({
     type: Boolean,
     default: true
   },
+  showShare: {
+    type: Boolean,
+    default: false
+  },
   size: {
     type: String,
     default: 'normal',
@@ -54,12 +66,22 @@ const props = defineProps({
   }
 })
 
+const emit = defineEmits(['share'])
+
 const initials = computed(() => {
-  const words = props.achievement.title.split(' ')
+  const title = props.achievement.title || ''
+  if (title.length === 0) return '??'
+  
+  const words = title.split(' ').filter(w => w.length > 0)
   if (words.length >= 2) {
-    return words[0][0] + words[1][0]
+    return (words[0][0] + words[1][0]).toUpperCase()
   }
-  return props.achievement.title.substring(0, 2).toUpperCase()
+  
+  // For single word or short titles
+  if (title.length >= 2) {
+    return title.substring(0, 2).toUpperCase()
+  }
+  return title[0].toUpperCase()
 })
 
 const badgeClasses = computed(() => {
@@ -94,5 +116,9 @@ const formatDate = (dateStr) => {
   if (!dateStr) return ''
   const date = new Date(dateStr)
   return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+}
+
+const handleShare = () => {
+  emit('share', props.achievement)
 }
 </script>

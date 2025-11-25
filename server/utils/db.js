@@ -243,8 +243,11 @@ export const progressOperations = {
 // Activity operations for tracking user actions
 export const activityOperations = {
   async logActivity(userId, activityType, data) {
+    // Generate a more robust unique ID using timestamp and random bytes
+    const timestamp = Date.now()
+    const randomPart = Math.random().toString(36).substring(2, 11) + Math.random().toString(36).substring(2, 11)
     const activityItem = {
-      activityId: `${userId}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      activityId: `${userId}_${timestamp}_${randomPart}`,
       userId,
       type: activityType,
       title: data.title || '',
