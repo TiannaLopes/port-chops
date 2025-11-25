@@ -22,7 +22,23 @@ const docClient = DynamoDBDocumentClient.from(client, {
 const TABLES = {
   USERS: process.env.DYNAMODB_USERS_TABLE || 'port-chops-users',
   LESSONS: process.env.DYNAMODB_LESSONS_TABLE || 'port-chops-lessons',
-  USER_PROGRESS: process.env.DYNAMODB_USER_PROGRESS_TABLE || 'port-chops-user-progress'
+  USER_PROGRESS: process.env.DYNAMODB_USER_PROGRESS_TABLE || 'port-chops-user-progress',
+  USER_ACTIVITY: process.env.DYNAMODB_USER_ACTIVITY_TABLE || 'port-chops-user-activity',
+  USER_ACHIEVEMENTS: process.env.DYNAMODB_USER_ACHIEVEMENTS_TABLE || 'port-chops-user-achievements'
+}
+
+// Achievement definitions
+export const ACHIEVEMENTS = {
+  FIRST_STEP: { id: 'first_step', title: 'First Step', description: 'Complete your first lesson', points: 10, milestone: 1, type: 'lessons' },
+  TEN_LESSONS: { id: 'ten_lessons', title: '10 Lessons', description: 'Complete 10 lessons', points: 50, milestone: 10, type: 'lessons' },
+  FIFTY_LESSONS: { id: 'fifty_lessons', title: '50 Lessons', description: 'Complete 50 lessons', points: 200, milestone: 50, type: 'lessons' },
+  WEEK_STREAK: { id: 'week_streak', title: 'Week Streak', description: 'Maintain a 7-day streak', points: 100, milestone: 7, type: 'streak' },
+  MONTH_STREAK: { id: 'month_streak', title: 'Month Streak', description: 'Maintain a 30-day streak', points: 500, milestone: 30, type: 'streak' },
+  HUNDRED_WORDS: { id: 'hundred_words', title: '100 Words', description: 'Learn 100 vocabulary words', points: 150, milestone: 100, type: 'vocabulary' },
+  FIVE_HUNDRED_WORDS: { id: 'five_hundred_words', title: '500 Words', description: 'Learn 500 vocabulary words', points: 500, milestone: 500, type: 'vocabulary' },
+  RECIPE_PRO: { id: 'recipe_pro', title: 'Recipe Pro', description: 'Save 10 recipes to favorites', points: 75, milestone: 10, type: 'recipes' },
+  POINTS_500: { id: 'points_500', title: 'Point Collector', description: 'Earn 500 points', points: 50, milestone: 500, type: 'points' },
+  POINTS_1000: { id: 'points_1000', title: 'Point Master', description: 'Earn 1000 points', points: 100, milestone: 1000, type: 'points' }
 }
 
 // Database operations
@@ -221,6 +237,213 @@ export const progressOperations = {
       progress: 100
     }
     return await db.update(TABLES.USER_PROGRESS, { userId, lessonId }, updates)
+  }
+}
+
+// Activity operations for tracking user actions
+export const activityOperations = {
+  async logActivity(userId, activityType, data) {
+    // Generate a more robust unique ID using timestamp and random bytes
+    const timestamp = Date.now()
+    const randomPart = Math.random().toString(36).substring(2, 11) + Math.random().toString(36).substring(2, 11)
+    const activityItem = {
+      activityId: `${userId}_${timestamp}_${randomPart}`,
+      userId,
+      type: activityType,
+      title: data.title || '',
+      description: data.description || '',
+      points: data.points || 0,
+      metadata: data.metadata || {},
+      createdAt: new Date().toISOString()
+    }
+    return await db.put(TABLES.USER_ACTIVITY, activityItem)
+  },
+
+  async getRecentActivity(userId, limit = 10) {
+    try {
+      const activities = await db.query(
+        TABLES.USER_ACTIVITY,
+        'userId = :userId',
+        { ':userId': userId }
+      )
+      // Sort by createdAt descending and limit results
+      return activities
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+        .slice(0, limit)
+    } catch {
+      return []
+    }
+  },
+
+  async getActivityByDate(userId, startDate, endDate) {
+    try {
+      const activities = await db.query(
+        TABLES.USER_ACTIVITY,
+        'userId = :userId',
+        { ':userId': userId }
+      )
+      return activities.filter(activity => {
+        const activityDate = new Date(activity.createdAt)
+        return activityDate >= new Date(startDate) && activityDate <= new Date(endDate)
+      })
+    } catch {
+      return []
+    }
+  }
+}
+
+// Achievement operations
+export const achievementOperations = {
+  async getUserAchievements(userId) {
+    try {
+      const achievements = await db.query(
+        TABLES.USER_ACHIEVEMENTS,
+        'userId = :userId',
+        { ':userId': userId }
+      )
+      return achievements || []
+    } catch {
+      return []
+    }
+  },
+
+  async grantAchievement(userId, achievementId, achievementData) {
+    const achievement = {
+      achievementRecordId: `${userId}_${achievementId}`,
+      userId,
+      achievementId,
+      title: achievementData.title,
+      description: achievementData.description,
+      points: achievementData.points || 0,
+      earnedAt: new Date().toISOString()
+    }
+    return await db.put(TABLES.USER_ACHIEVEMENTS, achievement)
+  },
+
+  async hasAchievement(userId, achievementId) {
+    try {
+      const achievements = await this.getUserAchievements(userId)
+      return achievements.some(a => a.achievementId === achievementId)
+    } catch {
+      return false
+    }
+  },
+
+  async checkAndGrantAchievements(userId, userStats) {
+    const grantedAchievements = []
+    
+    for (const [key, achievement] of Object.entries(ACHIEVEMENTS)) {
+      const hasIt = await this.hasAchievement(userId, achievement.id)
+      if (hasIt) continue
+      
+      let shouldGrant = false
+      
+      switch (achievement.type) {
+        case 'lessons':
+          shouldGrant = (userStats.completedLessons || 0) >= achievement.milestone
+          break
+        case 'streak':
+          shouldGrant = (userStats.currentStreak || 0) >= achievement.milestone
+          break
+        case 'vocabulary':
+          shouldGrant = (userStats.vocabWords || 0) >= achievement.milestone
+          break
+        case 'recipes':
+          shouldGrant = (userStats.savedRecipes || 0) >= achievement.milestone
+          break
+        case 'points':
+          shouldGrant = (userStats.totalPoints || 0) >= achievement.milestone
+          break
+      }
+      
+      if (shouldGrant) {
+        await this.grantAchievement(userId, achievement.id, achievement)
+        grantedAchievements.push(achievement)
+      }
+    }
+    
+    return grantedAchievements
+  }
+}
+
+// Streak operations
+export const streakOperations = {
+  async updateStreak(userId) {
+    const user = await userOperations.getUser(userId)
+    if (!user) return null
+    
+    const now = new Date()
+    const today = now.toISOString().split('T')[0]
+    const lastActivityDate = user.lastActivityDate || null
+    
+    let newStreak = user.currentStreak || 0
+    let longestStreak = user.longestStreak || 0
+    
+    if (lastActivityDate) {
+      const lastDate = new Date(lastActivityDate)
+      const yesterday = new Date(now)
+      yesterday.setDate(yesterday.getDate() - 1)
+      const yesterdayStr = yesterday.toISOString().split('T')[0]
+      
+      if (lastActivityDate === today) {
+        // Already logged activity today, no streak update needed
+        return { currentStreak: newStreak, longestStreak }
+      } else if (lastActivityDate === yesterdayStr) {
+        // Consecutive day - increment streak
+        newStreak += 1
+      } else {
+        // Streak broken - reset to 1
+        newStreak = 1
+      }
+    } else {
+      // First activity ever
+      newStreak = 1
+    }
+    
+    // Update longest streak if current is higher
+    if (newStreak > longestStreak) {
+      longestStreak = newStreak
+    }
+    
+    // Update user with new streak data
+    await userOperations.updateUser(userId, {
+      currentStreak: newStreak,
+      longestStreak,
+      lastActivityDate: today
+    })
+    
+    return { currentStreak: newStreak, longestStreak }
+  },
+
+  async getDailyGoalProgress(userId) {
+    const user = await userOperations.getUser(userId)
+    if (!user) return { target: 3, completed: 0, progress: 0 }
+    
+    const target = user.dailyGoal || 3
+    const today = new Date().toISOString().split('T')[0]
+    
+    // Count lessons completed today
+    try {
+      const activities = await activityOperations.getActivityByDate(
+        userId,
+        `${today}T00:00:00.000Z`,
+        `${today}T23:59:59.999Z`
+      )
+      const lessonsToday = activities.filter(a => a.type === 'lesson_complete').length
+      const progress = Math.min(100, Math.round((lessonsToday / target) * 100))
+      
+      return {
+        target,
+        completed: lessonsToday,
+        progress
+      }
+    } catch {
+      return { target, completed: 0, progress: 0 }
+    }
+  },
+
+  async setDailyGoal(userId, goal) {
+    return await userOperations.updateUser(userId, { dailyGoal: goal })
   }
 }
 
