@@ -26,7 +26,7 @@
         "../node_modules/@unhead/vue"
       ],
       "@nuxt/devtools": [
-        "../node_modules/@nuxt/devtools"
+        "../node_modules/nuxt/node_modules/@nuxt/devtools"
       ],
       "@vue/runtime-core": [
         "../node_modules/@vue/runtime-core"
@@ -44,7 +44,7 @@
         "../node_modules/nuxt"
       ],
       "vite/client": [
-        "../node_modules/vite/client"
+        "../node_modules/nuxt/node_modules/vite/client"
       ],
       "~": [
         ".."
@@ -107,7 +107,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/dev.json"
+        "./manifest/meta/256ff8b1-0e96-4908-971f-485de4a74a8e.json"
       ],
       "#components": [
         "./components"
@@ -153,6 +153,8 @@
     "./nuxt.d.ts",
     "../node_modules/runtime",
     "../node_modules/dist/runtime",
+    "../node_modules/nuxt/node_modules/runtime",
+    "../node_modules/nuxt/node_modules/dist/runtime",
     ".."
   ],
   "exclude": [
@@ -160,6 +162,8 @@
     "../.data",
     "../node_modules/runtime/server",
     "../node_modules/dist/runtime/server",
-    "dev"
+    "../node_modules/nuxt/node_modules/runtime/server",
+    "../node_modules/nuxt/node_modules/dist/runtime/server",
+    "../.amplify-hosting"
   ]
 }
