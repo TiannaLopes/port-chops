@@ -1,1 +1,0 @@
-export { default } from "file:///home/runner/work/port-chops/port-chops/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
