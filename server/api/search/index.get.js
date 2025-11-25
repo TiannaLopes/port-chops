@@ -174,7 +174,7 @@ function searchCultural(searchTerm) {
     {
       title: 'Fado: The Soul of Portugal',
       category: 'Traditions',
-      excerpt: 'Understanding fado music and its cultural significance in Portuguese culture.'
+      excerpt: 'Understanding fado music and its cultural significance.'
     },
     {
       title: 'Portuguese Coffee Culture',

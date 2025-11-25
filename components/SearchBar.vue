@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full max-w-2xl">
+  <div ref="searchBarRef" class="relative w-full max-w-2xl">
     <div class="relative">
       <input
         v-model="searchQuery"
@@ -54,18 +54,19 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
 const searchQuery = ref('')
 const showSuggestions = ref(false)
 const suggestions = ref([])
-let debounceTimer = null
+const debounceTimer = ref(null)
+const searchBarRef = ref(null)
 
 const handleInput = () => {
-  if (debounceTimer) {
-    clearTimeout(debounceTimer)
+  if (debounceTimer.value) {
+    clearTimeout(debounceTimer.value)
   }
 
   if (searchQuery.value.trim().length < 2) {
@@ -74,7 +75,7 @@ const handleInput = () => {
     return
   }
 
-  debounceTimer = setTimeout(async () => {
+  debounceTimer.value = setTimeout(async () => {
     await fetchSuggestions()
   }, 300)
 }
@@ -119,11 +120,24 @@ const clearSearch = () => {
 }
 
 // Close suggestions when clicking outside
-if (process.client) {
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.relative')) {
-      showSuggestions.value = false
-    }
-  })
+const handleClickOutside = (e) => {
+  if (searchBarRef.value && !searchBarRef.value.contains(e.target)) {
+    showSuggestions.value = false
+  }
 }
+
+onMounted(() => {
+  if (process.client) {
+    document.addEventListener('click', handleClickOutside)
+  }
+})
+
+onUnmounted(() => {
+  if (process.client) {
+    document.removeEventListener('click', handleClickOutside)
+  }
+  if (debounceTimer.value) {
+    clearTimeout(debounceTimer.value)
+  }
+})
 </script>
