@@ -1,7 +1,10 @@
 declare global {
+  const ACHIEVEMENTS: typeof import('../../server/utils/db').ACHIEVEMENTS
   const TABLES: typeof import('../../server/utils/db').TABLES
   const __buildAssetsURL: typeof import('../../node_modules/@nuxt/nitro-server/dist/runtime/utils/paths').buildAssetsURL
   const __publicAssetsURL: typeof import('../../node_modules/@nuxt/nitro-server/dist/runtime/utils/paths').publicAssetsURL
+  const achievementOperations: typeof import('../../server/utils/db').achievementOperations
+  const activityOperations: typeof import('../../server/utils/db').activityOperations
   const appendCorsHeaders: typeof import('../../node_modules/h3').appendCorsHeaders
   const appendCorsPreflightHeaders: typeof import('../../node_modules/h3').appendCorsPreflightHeaders
   const appendHeader: typeof import('../../node_modules/h3').appendHeader
@@ -113,6 +116,7 @@ declare global {
   const setResponseHeaders: typeof import('../../node_modules/h3').setResponseHeaders
   const setResponseStatus: typeof import('../../node_modules/h3').setResponseStatus
   const splitCookiesString: typeof import('../../node_modules/h3').splitCookiesString
+  const streakOperations: typeof import('../../server/utils/db').streakOperations
   const toEventHandler: typeof import('../../node_modules/h3').toEventHandler
   const toNodeListener: typeof import('../../node_modules/h3').toNodeListener
   const toPlainHandler: typeof import('../../node_modules/h3').toPlainHandler
@@ -144,4 +148,4 @@ export { defineNitroErrorHandler } from 'nitropack/runtime/internal/error/utils'
 export { appendCorsHeaders, appendCorsPreflightHeaders, appendHeader, appendHeaders, appendResponseHeader, appendResponseHeaders, assertMethod, callNodeListener, clearResponseHeaders, clearSession, createApp, createAppEventHandler, createError, createEvent, createEventStream, createRouter, defaultContentType, defineEventHandler, defineLazyEventHandler, defineNodeListener, defineNodeMiddleware, defineRequestMiddleware, defineResponseMiddleware, defineWebSocket, defineWebSocketHandler, deleteCookie, dynamicEventHandler, eventHandler, fetchWithEvent, fromNodeMiddleware, fromPlainHandler, fromWebHandler, getCookie, getHeader, getHeaders, getMethod, getProxyRequestHeaders, getQuery, getRequestFingerprint, getRequestHeader, getRequestHeaders, getRequestHost, getRequestIP, getRequestPath, getRequestProtocol, getRequestURL, getRequestWebStream, getResponseHeader, getResponseHeaders, getResponseStatus, getResponseStatusText, getRouterParam, getRouterParams, getSession, getValidatedQuery, getValidatedRouterParams, handleCacheHeaders, handleCors, isCorsOriginAllowed, isError, isEvent, isEventHandler, isMethod, isPreflightRequest, isStream, isWebResponse, lazyEventHandler, parseCookies, promisifyNodeListener, proxyRequest, readBody, readFormData, readMultipartFormData, readRawBody, readValidatedBody, removeResponseHeader, sanitizeStatusCode, sanitizeStatusMessage, sealSession, send, sendError, sendIterable, sendNoContent, sendProxy, sendRedirect, sendStream, sendWebResponse, serveStatic, setCookie, setHeader, setHeaders, setResponseHeader, setResponseHeaders, setResponseStatus, splitCookiesString, toEventHandler, toNodeListener, toPlainHandler, toWebHandler, toWebRequest, unsealSession, updateSession, useBase, useSession, writeEarlyHints } from 'h3';
 export { buildAssetsURL as __buildAssetsURL, publicAssetsURL as __publicAssetsURL } from '/home/runner/work/port-chops/port-chops/node_modules/@nuxt/nitro-server/dist/runtime/utils/paths';
 export { defineAppConfig } from '/home/runner/work/port-chops/port-chops/node_modules/@nuxt/nitro-server/dist/runtime/utils/config';
-export { default as db, userOperations, lessonOperations, progressOperations, TABLES } from '/home/runner/work/port-chops/port-chops/server/utils/db';
+export { default as db, ACHIEVEMENTS, userOperations, lessonOperations, progressOperations, activityOperations, achievementOperations, streakOperations, TABLES } from '/home/runner/work/port-chops/port-chops/server/utils/db';

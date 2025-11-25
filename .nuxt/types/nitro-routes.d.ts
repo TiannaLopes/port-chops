@@ -18,11 +18,23 @@ declare module "nitropack/types" {
     '/api/progress/:userId': {
       'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/progress/[userId].get').default>>>>
     }
+    '/api/progress/activity': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/progress/activity.get').default>>>>
+    }
+    '/api/progress/export': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/progress/export.get').default>>>>
+    }
     '/api/progress/save': {
       'post': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/progress/save.post').default>>>>
     }
+    '/api/progress/stats': {
+      'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/progress/stats.get').default>>>>
+    }
     '/api/user/:id': {
       'get': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/user/[id].get').default>>>>
+    }
+    '/api/user/profile': {
+      'put': Simplify<Serialize<Awaited<ReturnType<typeof import('../../server/api/user/profile.put').default>>>>
     }
     '/__nuxt_error': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/nitro-server/dist/runtime/handlers/renderer').default>>>>

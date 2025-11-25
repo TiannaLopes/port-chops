@@ -14,9 +14,11 @@ type HydrationStrategies = {
 type LazyComponent<T> = DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }> & T
 
 interface _GlobalComponents {
+  'AchievementBadge': typeof import("../../components/AchievementBadge.vue")['default']
   'Footer': typeof import("../../components/Footer.vue")['default']
   'NavBar': typeof import("../../components/NavBar.vue")['default']
   'NewsletterPopup': typeof import("../../components/NewsletterPopup.vue")['default']
+  'ProgressChart': typeof import("../../components/ProgressChart.vue")['default']
   'RecipeCard': typeof import("../../components/RecipeCard.vue")['default']
   'NuxtWelcome': typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']
   'NuxtLayout': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -41,9 +43,11 @@ interface _GlobalComponents {
   'Html': typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Html']
   'Body': typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Body']
   'NuxtIsland': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-island")['default']
+  'LazyAchievementBadge': LazyComponent<typeof import("../../components/AchievementBadge.vue")['default']>
   'LazyFooter': LazyComponent<typeof import("../../components/Footer.vue")['default']>
   'LazyNavBar': LazyComponent<typeof import("../../components/NavBar.vue")['default']>
   'LazyNewsletterPopup': LazyComponent<typeof import("../../components/NewsletterPopup.vue")['default']>
+  'LazyProgressChart': LazyComponent<typeof import("../../components/ProgressChart.vue")['default']>
   'LazyRecipeCard': LazyComponent<typeof import("../../components/RecipeCard.vue")['default']>
   'LazyNuxtWelcome': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
   'LazyNuxtLayout': LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>

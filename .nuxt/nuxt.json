@@ -1,7 +1,7 @@
 {
-  "_hash": "S585NNofb1wayUa6guAvzt3ZEmkKE9FZjLDGAkwMds4",
+  "_hash": "RSkjeoyVVWmEyousOeTXLIVTqVgNXU_KOCdnK26K8Ec",
   "project": {
-    "rootDir": "/Users/tiannaalinalopes/projects/port-chops"
+    "rootDir": "/home/runner/work/port-chops/port-chops"
   },
   "versions": {
     "nuxt": "3.20.1"

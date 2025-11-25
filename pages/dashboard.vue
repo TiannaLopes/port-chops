@@ -73,18 +73,22 @@
           <!-- Recent Activity -->
           <div class="card p-6">
             <h2 class="text-2xl font-bold text-breezeway-800 mb-4">Recent Activity</h2>
-            <div class="space-y-4">
+            <div v-if="recentActivity.length > 0" class="space-y-4">
               <div v-for="activity in recentActivity" :key="activity.id" class="flex items-start gap-4 pb-4 border-b border-seasalt-200 last:border-0">
                 <div class="flex-1">
                   <p class="font-semibold text-gray-900">{{ activity.title }}</p>
                   <p class="text-sm text-gray-600">{{ activity.description }}</p>
                   <p class="text-xs text-gray-500 mt-1">{{ activity.time }}</p>
                 </div>
-                <div class="text-right">
+                <div v-if="activity.points" class="text-right">
                   <div class="text-lg font-bold text-butter-600">+{{ activity.points }}</div>
                   <div class="text-xs text-gray-500">points</div>
                 </div>
               </div>
+            </div>
+            <div v-else class="text-center py-6">
+              <p class="text-gray-500">No recent activity yet.</p>
+              <p class="text-sm text-gray-400 mt-1">Complete a lesson to see your activity here!</p>
             </div>
           </div>
 
@@ -140,8 +144,8 @@
           <!-- Achievements -->
           <div class="card p-6">
             <h2 class="text-xl font-bold text-breezeway-800 mb-4">Achievements</h2>
-            <div class="space-y-2">
-              <div v-for="achievement in achievements" :key="achievement.id" class="flex items-center justify-between p-2 rounded-lg" :class="achievement.earned ? 'bg-breezeway-50' : 'bg-gray-50'">
+            <div v-if="achievements.length > 0" class="space-y-2">
+              <div v-for="achievement in achievements.slice(0, 6)" :key="achievement.id" class="flex items-center justify-between p-2 rounded-lg" :class="achievement.earned ? 'bg-breezeway-50' : 'bg-gray-50'">
                 <p class="text-sm font-semibold" :class="achievement.earned ? 'text-breezeway-900' : 'text-gray-400'">
                   {{ achievement.title }}
                 </p>
@@ -149,6 +153,18 @@
                   Earned
                 </span>
               </div>
+            </div>
+            <div v-else class="space-y-2">
+              <div class="flex items-center justify-between p-2 rounded-lg bg-gray-50">
+                <p class="text-sm font-semibold text-gray-400">First Step</p>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded-lg bg-gray-50">
+                <p class="text-sm font-semibold text-gray-400">10 Lessons</p>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded-lg bg-gray-50">
+                <p class="text-sm font-semibold text-gray-400">Week Streak</p>
+              </div>
+              <p class="text-xs text-center text-gray-400 mt-2">Complete lessons to unlock achievements!</p>
             </div>
           </div>
 
@@ -230,80 +246,47 @@ useSeoMeta({
   robots: 'noindex, nofollow'
 })
 
-// User Data (TODO: Replace with actual API calls)
+// User Data
 const user = ref({
-  name: 'João Silva',
-  email: 'joao@example.com',
-  createdAt: '2024-01-15'
+  name: 'User',
+  email: '',
+  createdAt: new Date().toISOString()
 })
+
+const userId = ref(null)
+const isLoading = ref(true)
 
 const userStats = ref({
-  completedLessons: 12,
-  totalPoints: 450,
-  currentStreak: 7,
-  vocabWords: 85
+  completedLessons: 0,
+  totalPoints: 0,
+  currentStreak: 0,
+  vocabWords: 0
 })
 
-const currentLesson = ref({
-  category: 'Basics',
-  title: 'Greetings and Introductions',
-  description: 'Learn essential phrases for meeting people in Portuguese',
-  progress: 65
-})
+const currentLesson = ref(null)
 
-const recentActivity = ref([
-  {
-    id: 1,
-    title: 'Completed: Basic Verbs',
-    description: 'Learned 15 essential Portuguese verbs',
-    time: '2 hours ago',
-    points: 50,
-    color: 'bg-breezeway-500'
-  },
-  {
-    id: 2,
-    title: 'Recipe Added',
-    description: 'Saved Pastéis de Nata to your favorites',
-    time: '5 hours ago',
-    points: 10,
-    color: 'bg-butter-500'
-  },
-  {
-    id: 3,
-    title: 'Completed: Numbers',
-    description: 'Mastered counting from 1-100',
-    time: '1 day ago',
-    points: 40,
-    color: 'bg-garden-500'
-  }
-])
+const recentActivity = ref([])
 
 const learningPath = ref([
-  { id: 1, level: 1, title: 'Beginner', lessons: 10, completed: true, current: false },
-  { id: 2, level: 2, title: 'Elementary', lessons: 15, completed: false, current: true },
+  { id: 1, level: 1, title: 'Beginner', lessons: 10, completed: false, current: true },
+  { id: 2, level: 2, title: 'Elementary', lessons: 15, completed: false, current: false },
   { id: 3, level: 3, title: 'Intermediate', lessons: 20, completed: false, current: false },
   { id: 4, level: 4, title: 'Advanced', lessons: 25, completed: false, current: false }
 ])
 
-const achievements = ref([
-  { id: 1, title: 'First Step', earned: true, color: 'bg-breezeway-500' },
-  { id: 2, title: '10 Lessons', earned: true, color: 'bg-butter-500' },
-  { id: 3, title: 'Week Streak', earned: true, color: 'bg-garden-500' },
-  { id: 4, title: '100 Words', earned: false, color: 'bg-brick-500' },
-  { id: 5, title: 'Recipe Pro', earned: false, color: 'bg-cottage-500' },
-  { id: 6, title: 'Month Streak', earned: false, color: 'bg-seasalt-500' }
-])
+const achievements = ref([])
 
 const dailyGoal = ref({
   target: 3,
-  completed: 2,
-  progress: 67
+  completed: 0,
+  progress: 0
 })
 
 // Computed properties
 const userName = computed(() => user.value.name)
 const userEmail = computed(() => user.value.email)
 const userInitials = computed(() => {
+  if (!user.value.name) return 'U'
   const names = user.value.name.split(' ')
   return names.length > 1 
     ? names[0][0] + names[names.length - 1][0]
@@ -316,14 +299,124 @@ const memberSince = computed(() => {
 
 const circumference = computed(() => 2 * Math.PI * 56)
 
-// Load user data from localStorage
-onMounted(() => {
+// Fetch user stats from API
+const fetchUserStats = async () => {
+  if (!userId.value) return
+  
+  try {
+    const response = await $fetch(`/api/progress/stats?userId=${userId.value}`)
+    if (response.success) {
+      userStats.value = response.stats
+      achievements.value = response.achievements || []
+      dailyGoal.value = response.dailyGoal || { target: 3, completed: 0, progress: 0 }
+      
+      // Update learning path based on completed lessons
+      updateLearningPath(response.stats.completedLessons)
+    }
+  } catch (error) {
+    console.error('Failed to fetch user stats:', error)
+    // Keep default values if API fails
+  }
+}
+
+// Fetch recent activity from API
+const fetchRecentActivity = async () => {
+  if (!userId.value) return
+  
+  try {
+    const response = await $fetch(`/api/progress/activity?userId=${userId.value}&limit=5`)
+    if (response.success && response.activities.length > 0) {
+      recentActivity.value = response.activities
+    }
+  } catch (error) {
+    console.error('Failed to fetch activity:', error)
+    // Keep empty if API fails
+  }
+}
+
+// Fetch current lesson progress
+const fetchCurrentLesson = async () => {
+  if (!userId.value) return
+  
+  try {
+    const response = await $fetch(`/api/progress/${userId.value}`)
+    if (response.success && response.progress.length > 0) {
+      // Find the most recent incomplete lesson
+      const inProgressLessons = response.progress
+        .filter(p => !p.completed && p.progress > 0)
+        .sort((a, b) => new Date(b.lastAccessedAt) - new Date(a.lastAccessedAt))
+      
+      if (inProgressLessons.length > 0) {
+        const lesson = inProgressLessons[0]
+        currentLesson.value = {
+          category: lesson.category || 'Lesson',
+          title: lesson.title || lesson.lessonId,
+          description: lesson.description || 'Continue where you left off',
+          progress: lesson.progress || 0
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Failed to fetch current lesson:', error)
+    // Set a default lesson to encourage starting
+    currentLesson.value = {
+      category: 'Basics',
+      title: 'Greetings and Introductions',
+      description: 'Learn essential phrases for meeting people in Portuguese',
+      progress: 0
+    }
+  }
+}
+
+// Update learning path based on completed lessons
+const updateLearningPath = (completedCount) => {
+  const levels = [
+    { threshold: 0, lessons: 10 },
+    { threshold: 10, lessons: 15 },
+    { threshold: 25, lessons: 20 },
+    { threshold: 45, lessons: 25 }
+  ]
+  
+  learningPath.value = learningPath.value.map((level, index) => {
+    const threshold = levels[index].threshold
+    const nextThreshold = index < levels.length - 1 ? levels[index + 1].threshold : Infinity
+    
+    return {
+      ...level,
+      completed: completedCount >= nextThreshold,
+      current: completedCount >= threshold && completedCount < nextThreshold
+    }
+  })
+}
+
+// Load user data from localStorage and fetch from API
+onMounted(async () => {
   const storedUser = localStorage.getItem('user')
   if (storedUser) {
     const userData = JSON.parse(storedUser)
     user.value.name = userData.name || 'User'
     user.value.email = userData.email || ''
     user.value.createdAt = userData.createdAt || new Date().toISOString()
+    userId.value = userData.userId || null
+    
+    // Fetch data from API if we have a userId
+    if (userId.value) {
+      await Promise.all([
+        fetchUserStats(),
+        fetchRecentActivity(),
+        fetchCurrentLesson()
+      ])
+    } else {
+      // Set default current lesson for new users
+      currentLesson.value = {
+        category: 'Basics',
+        title: 'Greetings and Introductions',
+        description: 'Learn essential phrases for meeting people in Portuguese',
+        progress: 0
+      }
+    }
+    
+    isLoading.value = false
   } else {
     // Redirect to login if no user
     navigateTo('/login')
