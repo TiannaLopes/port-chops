@@ -1,0 +1,82 @@
+[
+  {
+    "lessonId": "basics-greetings-01",
+    "category": "Basics & Greetings",
+    "title": "Essential Greetings",
+    "slug": "essential-greetings",
+    "difficulty": "Beginner",
+    "estimatedTime": "15 min",
+    "description": "Learn how to greet people in Portuguese with common phrases for different times of day and situations.",
+    "order": 1
+  },
+  {
+    "lessonId": "basics-numbers-01",
+    "category": "Basics & Greetings",
+    "title": "Numbers 1-20",
+    "slug": "numbers-1-20",
+    "difficulty": "Beginner",
+    "estimatedTime": "20 min",
+    "description": "Learn to count from 1 to 20 in Portuguese with proper pronunciation.",
+    "order": 2
+  },
+  {
+    "lessonId": "basics-introductions-01",
+    "category": "Basics & Greetings",
+    "title": "Introducing Yourself",
+    "slug": "introducing-yourself",
+    "difficulty": "Beginner",
+    "estimatedTime": "20 min",
+    "description": "Learn how to introduce yourself in Portuguese, including your name, age, nationality, and profession.",
+    "order": 3
+  },
+  {
+    "lessonId": "basics-days-time-01",
+    "category": "Basics & Greetings",
+    "title": "Days, Months, and Telling Time",
+    "slug": "days-months-time",
+    "difficulty": "Beginner",
+    "estimatedTime": "25 min",
+    "description": "Learn how to express days of the week, months of the year, and tell time in Portuguese.",
+    "order": 4
+  },
+  {
+    "lessonId": "food-ordering-01",
+    "category": "Food & Dining",
+    "title": "Ordering at a Restaurant",
+    "slug": "ordering-at-restaurant",
+    "difficulty": "Beginner",
+    "estimatedTime": "25 min",
+    "description": "Learn essential phrases for ordering food and drinks at Portuguese restaurants.",
+    "order": 5
+  },
+  {
+    "lessonId": "food-ingredients-01",
+    "category": "Food & Dining",
+    "title": "Common Food Ingredients",
+    "slug": "common-food-ingredients",
+    "difficulty": "Beginner",
+    "estimatedTime": "20 min",
+    "description": "Learn the names of common food ingredients in Portuguese, essential for shopping at markets and reading recipes.",
+    "order": 6
+  },
+  {
+    "lessonId": "travel-directions-01",
+    "category": "Travel & Directions",
+    "title": "Asking for Directions",
+    "slug": "asking-for-directions",
+    "difficulty": "Beginner",
+    "estimatedTime": "25 min",
+    "description": "Learn how to ask for and understand directions in Portuguese, navigate the city, and find your way around.",
+    "order": 7
+  },
+  {
+    "lessonId": "grammar-verbs-01",
+    "category": "Grammar Essentials",
+    "title": "Present Tense Regular Verbs",
+    "slug": "present-tense-regular-verbs",
+    "difficulty": "Intermediate",
+    "estimatedTime": "30 min",
+    "description": "Master the present tense conjugation of regular Portuguese verbs ending in -ar, -er, and -ir.",
+    "order": 8
+  }
+]

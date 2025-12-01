@@ -1,0 +1,118 @@
+{
+  "lessonId": "basics-numbers-01",
+  "category": "Basics & Greetings",
+  "title": "Numbers 1-20",
+  "slug": "numbers-1-20",
+  "difficulty": "Beginner",
+  "estimatedTime": "20 min",
+  "description": "Learn to count from 1 to 20 in Portuguese with proper pronunciation and practice using numbers in context.",
+  "objectives": [
+    "Count from 1 to 20 in Portuguese",
+    "Pronounce numbers correctly",
+    "Use numbers in basic sentences",
+    "Understand number patterns"
+  ],
+  "vocabulary": [
+    { "portuguese": "um", "english": "one", "pronunciation": "oom", "notes": "masculine form" },
+    { "portuguese": "uma", "english": "one", "pronunciation": "OO-mah", "notes": "feminine form" },
+    { "portuguese": "dois", "english": "two", "pronunciation": "doysh", "notes": "masculine" },
+    { "portuguese": "duas", "english": "two", "pronunciation": "DOO-ash", "notes": "feminine" },
+    { "portuguese": "três", "english": "three", "pronunciation": "traysh" },
+    { "portuguese": "quatro", "english": "four", "pronunciation": "KWAH-troo" },
+    { "portuguese": "cinco", "english": "five", "pronunciation": "SEEN-koo" },
+    { "portuguese": "seis", "english": "six", "pronunciation": "saysh" },
+    { "portuguese": "sete", "english": "seven", "pronunciation": "SEH-teh" },
+    { "portuguese": "oito", "english": "eight", "pronunciation": "OY-too" },
+    { "portuguese": "nove", "english": "nine", "pronunciation": "NOH-veh" },
+    { "portuguese": "dez", "english": "ten", "pronunciation": "dezh" },
+    { "portuguese": "onze", "english": "eleven", "pronunciation": "ON-zeh" },
+    { "portuguese": "doze", "english": "twelve", "pronunciation": "DOH-zeh" },
+    { "portuguese": "treze", "english": "thirteen", "pronunciation": "TREH-zeh" },
+    { "portuguese": "catorze", "english": "fourteen", "pronunciation": "kah-TOR-zeh" },
+    { "portuguese": "quinze", "english": "fifteen", "pronunciation": "KEEN-zeh" },
+    { "portuguese": "dezasseis", "english": "sixteen", "pronunciation": "deh-zah-SAYSH" },
+    { "portuguese": "dezassete", "english": "seventeen", "pronunciation": "deh-zah-SEH-teh" },
+    { "portuguese": "dezoito", "english": "eighteen", "pronunciation": "deh-ZOY-too" },
+    { "portuguese": "dezanove", "english": "nineteen", "pronunciation": "deh-zah-NOH-veh" },
+    { "portuguese": "vinte", "english": "twenty", "pronunciation": "VEEN-teh" }
+  ],
+  "grammar": [
+    {
+      "title": "Gender Agreement with 1 and 2",
+      "content": "The numbers 'um/uma' (one) and 'dois/duas' (two) change based on the gender of the noun they modify.",
+      "examples": [
+        "um livro (one book - masculine)",
+        "uma casa (one house - feminine)",
+        "dois carros (two cars - masculine)",
+        "duas pessoas (two people - feminine)"
+      ]
+    },
+    {
+      "title": "Number Patterns",
+      "content": "Notice the pattern from 16-19: 'dez' (ten) + 'e' (and) + the single digit. Example: dezasseis = dez + e + seis (ten and six).",
+      "examples": [
+        "16 = dezasseis (dez + e + seis)",
+        "17 = dezassete (dez + e + sete)",
+        "18 = dezoito (dez + e + oito)",
+        "19 = dezanove (dez + e + nove)"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "How do you say '7' in Portuguese?",
+      "options": ["seis", "sete", "oito", "nove"],
+      "correctAnswer": 1,
+      "explanation": "Seven is 'sete' in Portuguese, pronounced SEH-teh."
+    },
+    {
+      "type": "fill-in-blank",
+      "question": "Complete: Tenho ____ anos. (I am 15 years old)",
+      "correctAnswer": "quinze",
+      "acceptableAnswers": ["quinze", "Quinze"],
+      "explanation": "Quinze means fifteen in Portuguese."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which is the correct way to say 'two houses' in Portuguese?",
+      "options": ["dois casas", "duas casas", "dois casa", "duas casa"],
+      "correctAnswer": 1,
+      "explanation": "'Casa' (house) is feminine, so you use 'duas' (feminine form of two). The answer is 'duas casas'."
+    },
+    {
+      "type": "translation",
+      "question": "Write the number 13 in Portuguese:",
+      "correctAnswer": "treze",
+      "acceptableAnswers": ["treze", "Treze"],
+      "explanation": "Thirteen is 'treze' in Portuguese."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "What number comes after 'dezoito'?",
+      "options": ["dezassete", "dezanove", "vinte", "dezasseis"],
+      "correctAnswer": 1,
+      "explanation": "After dezoito (18) comes dezanove (19)."
+    },
+    {
+      "type": "matching",
+      "question": "Match the Portuguese numbers with their values:",
+      "pairs": [
+        { "portuguese": "cinco", "english": "5" },
+        { "portuguese": "dez", "english": "10" },
+        { "portuguese": "quinze", "english": "15" },
+        { "portuguese": "vinte", "english": "20" }
+      ]
+    }
+  ],
+  "culturalNotes": [
+    {
+      "title": "European vs Brazilian Portuguese",
+      "content": "In European Portuguese, 16 is 'dezasseis' while in Brazilian Portuguese it's 'dezesseis'. The European version maintains the 'a' sound."
+    },
+    {
+      "title": "Using Numbers for Age",
+      "content": "To say your age, use 'Tenho [number] anos' (I have [number] years). Example: 'Tenho vinte anos' (I am 20 years old)."
+    }
+  ]
+}

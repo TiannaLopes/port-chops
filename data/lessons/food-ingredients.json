@@ -1,0 +1,227 @@
+{
+  "lessonId": "food-ingredients-01",
+  "category": "Food & Dining",
+  "title": "Common Food Ingredients",
+  "slug": "common-food-ingredients",
+  "difficulty": "Beginner",
+  "estimatedTime": "20 min",
+  "description": "Learn the names of common food ingredients in Portuguese, essential for shopping at markets and reading recipes.",
+  "objectives": [
+    "Identify common ingredients in Portuguese",
+    "Use food vocabulary at markets",
+    "Understand recipe terminology",
+    "Express dietary preferences"
+  ],
+  "vocabulary": [
+    {
+      "portuguese": "Carne",
+      "english": "Meat",
+      "pronunciation": "KAR-neh",
+      "example": "Não como carne.",
+      "notes": "Feminine noun"
+    },
+    {
+      "portuguese": "Peixe",
+      "english": "Fish",
+      "pronunciation": "PAY-sheh",
+      "example": "Gosto muito de peixe.",
+      "notes": "Very important in Portuguese cuisine"
+    },
+    {
+      "portuguese": "Frango",
+      "english": "Chicken",
+      "pronunciation": "FRAN-goo",
+      "example": "Peri-peri chicken.",
+      "notes": "Common meat in Portugal"
+    },
+    {
+      "portuguese": "Arroz",
+      "english": "Rice",
+      "pronunciation": "ah-ROSH",
+      "example": "Arroz de marisco.",
+      "notes": "Staple food, masculine"
+    },
+    {
+      "portuguese": "Batata",
+      "english": "Potato",
+      "pronunciation": "bah-TAH-tah",
+      "example": "Batatas fritas.",
+      "notes": "Very common side dish"
+    },
+    {
+      "portuguese": "Legumes",
+      "english": "Vegetables",
+      "pronunciation": "leh-GOO-mesh",
+      "example": "Sopa de legumes.",
+      "notes": "Masculine plural"
+    },
+    {
+      "portuguese": "Fruta",
+      "english": "Fruit",
+      "pronunciation": "FROO-tah",
+      "example": "Salada de fruta.",
+      "notes": "Feminine, collective noun"
+    },
+    {
+      "portuguese": "Queijo",
+      "english": "Cheese",
+      "pronunciation": "KAY-zhoo",
+      "example": "Queijo da Serra.",
+      "notes": "Many Portuguese varieties"
+    },
+    {
+      "portuguese": "Azeite",
+      "english": "Olive oil",
+      "pronunciation": "ah-ZAY-teh",
+      "example": "Azeite virgem extra.",
+      "notes": "Essential in Portuguese cooking"
+    },
+    {
+      "portuguese": "Alho",
+      "english": "Garlic",
+      "pronunciation": "AH-lyoo",
+      "example": "Molho de alho.",
+      "notes": "Used extensively in Portuguese cuisine"
+    },
+    {
+      "portuguese": "Cebola",
+      "english": "Onion",
+      "pronunciation": "seh-BOH-lah",
+      "example": "Sopa de cebola.",
+      "notes": "Feminine noun"
+    },
+    {
+      "portuguese": "Tomate",
+      "english": "Tomato",
+      "pronunciation": "toh-MAH-teh",
+      "example": "Salada de tomate.",
+      "notes": "Masculine noun"
+    },
+    {
+      "portuguese": "Pão",
+      "english": "Bread",
+      "pronunciation": "pow",
+      "example": "Pão com manteiga.",
+      "notes": "Served with most meals"
+    },
+    {
+      "portuguese": "Ovos",
+      "english": "Eggs",
+      "pronunciation": "OH-voosh",
+      "example": "Ovos mexidos.",
+      "notes": "Masculine plural"
+    },
+    {
+      "portuguese": "Leite",
+      "english": "Milk",
+      "pronunciation": "LAY-teh",
+      "example": "Café com leite.",
+      "notes": "Masculine noun"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "Gender of Food Nouns",
+      "content": "Food nouns have gender in Portuguese. Most ending in -a are feminine, most ending in -o are masculine. Some are irregular.",
+      "examples": [
+        "Feminine: a carne, a batata, a fruta, a cebola",
+        "Masculine: o peixe, o arroz, o queijo, o tomate",
+        "Irregular: o leite (masculine), a carne (feminine)"
+      ]
+    },
+    {
+      "title": "Using 'Gosto de' (I Like)",
+      "content": "To express food preferences, use 'gosto de' (I like) or 'não gosto de' (I don't like) followed by the food item.",
+      "examples": [
+        "Gosto de peixe. (I like fish.)",
+        "Não gosto de cebola. (I don't like onion.)",
+        "Gosto muito de queijo. (I really like cheese.)"
+      ]
+    },
+    {
+      "title": "Plural Forms",
+      "content": "Most nouns add -s for plural. Words ending in -l change to -is. Words ending in -ão have irregular plurals.",
+      "examples": [
+        "batata → batatas (potatoes)",
+        "animal → animais (animals)",
+        "pão → pães (breads)"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "What is the Portuguese word for 'chicken'?",
+      "options": [
+        "Peixe",
+        "Carne",
+        "Frango",
+        "Porco"
+      ],
+      "correctAnswer": 2,
+      "explanation": "'Frango' means chicken. It's one of the most common meats in Portuguese cuisine."
+    },
+    {
+      "type": "translation",
+      "question": "How do you say 'I like fish'?",
+      "correctAnswer": "Gosto de peixe",
+      "acceptableAnswers": ["Gosto de peixe", "gosto de peixe", "Eu gosto de peixe"],
+      "explanation": "'Gosto de peixe' means 'I like fish'. Use 'gosto de' followed by the food item."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "What is 'azeite'?",
+      "options": [
+        "Vinegar",
+        "Olive oil",
+        "Butter",
+        "Salt"
+      ],
+      "correctAnswer": 1,
+      "explanation": "'Azeite' is olive oil, an essential ingredient in Portuguese cooking."
+    },
+    {
+      "type": "fill-in-blank",
+      "question": "Complete: Salada de ____ (Tomato salad)",
+      "correctAnswer": "tomate",
+      "acceptableAnswers": ["tomate", "Tomate"],
+      "explanation": "'Tomate' means tomato. 'Salada de tomate' is a tomato salad."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which food item is feminine?",
+      "options": [
+        "O arroz",
+        "O queijo",
+        "A batata",
+        "O peixe"
+      ],
+      "correctAnswer": 2,
+      "explanation": "'A batata' (potato) is feminine. Notice the article 'a' instead of 'o'."
+    },
+    {
+      "type": "matching",
+      "question": "Match the Portuguese ingredients with English:",
+      "pairs": [
+        { "portuguese": "Pão", "english": "Bread" },
+        { "portuguese": "Ovos", "english": "Eggs" },
+        { "portuguese": "Queijo", "english": "Cheese" },
+        { "portuguese": "Leite", "english": "Milk" }
+      ]
+    }
+  ],
+  "culturalNotes": [
+    {
+      "title": "Portuguese Markets",
+      "content": "Portugal has wonderful fresh markets (mercados). The most famous is Mercado da Ribeira in Lisbon. Vendors are friendly and often give samples. It's normal to ask for specific amounts by weight."
+    },
+    {
+      "title": "Bacalhau - Portuguese Cod",
+      "content": "Dried salted cod (bacalhau) is a national treasure with supposedly 365 recipes - one for each day of the year. It's soaked before cooking and appears in many traditional dishes."
+    },
+    {
+      "title": "Olive Oil Quality",
+      "content": "Portugal produces excellent olive oil. Look for 'azeite virgem extra' (extra virgin). Portuguese cuisine uses olive oil generously - it's healthier than butter and adds authentic flavor."
+    }
+  ]
+}

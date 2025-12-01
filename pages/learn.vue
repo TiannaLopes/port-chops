@@ -11,13 +11,51 @@
       </div>
     </section>
 
-    <!-- Lesson Categories -->
+    <!-- Available Lessons -->
     <section class="container-custom py-16">
+      <h2 class="text-3xl font-display font-bold mb-8 text-gray-900">Available Lessons</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <NuxtLink 
+          v-for="lesson in lessons" 
+          :key="lesson.lessonId"
+          :to="`/lessons/${lesson.slug}`"
+          class="card p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300 border-l-4 border-breezeway-500"
+        >
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 bg-breezeway-100 text-breezeway-800 rounded-full text-xs font-semibold">
+              {{ lesson.category }}
+            </span>
+            <span class="px-3 py-1 bg-butter-100 text-butter-800 rounded-full text-xs font-semibold">
+              {{ lesson.difficulty }}
+            </span>
+          </div>
+          
+          <h3 class="text-2xl font-display font-bold mb-3 text-breezeway-800">{{ lesson.title }}</h3>
+          <p class="text-gray-600 mb-4 line-clamp-3">{{ lesson.description }}</p>
+          
+          <div class="flex items-center text-sm text-breezeway-600 font-semibold mb-6">
+            <span>{{ lesson.estimatedTime }}</span>
+          </div>
+          
+          <div class="btn-primary w-full text-center">
+            Start Lesson
+          </div>
+        </NuxtLink>
+      </div>
+      
+      <div v-if="lessons.length === 0" class="text-center py-12">
+        <p class="text-gray-600 text-lg">More lessons coming soon!</p>
+      </div>
+    </section>
+
+    <!-- Lesson Categories Overview -->
+    <section class="container-custom py-16">
+      <h2 class="text-3xl font-display font-bold mb-8 text-gray-900">Learning Path</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div 
           v-for="category in lessonCategories" 
           :key="category.title"
-          class="card p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer border-l-4 border-breezeway-500"
+          class="card p-8 border-l-4 border-breezeway-500"
         >
           <div class="w-16 h-16 bg-gradient-to-br from-butter-400 to-cottage rounded-2xl mb-6"></div>
           <h3 class="text-2xl font-display font-bold mb-3 text-breezeway-800">{{ category.title }}</h3>
@@ -25,15 +63,12 @@
           <div class="text-sm text-breezeway-600 font-semibold mb-4">
             {{ category.lessons }} lessons • {{ category.level }}
           </div>
-          <ul class="space-y-3 mb-6">
+          <ul class="space-y-3">
             <li v-for="topic in category.topics" :key="topic" class="flex items-start">
               <span class="inline-block w-2 h-2 bg-breezeway-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
               <span class="text-gray-700">{{ topic }}</span>
             </li>
           </ul>
-          <button class="btn-primary w-full">
-            Start Learning
-          </button>
         </div>
       </div>
     </section>
@@ -67,6 +102,8 @@
 </template>
 
 <script setup>
+import lessonsIndex from '~/data/lessons/index.json'
+
 useSeoMeta({
   title: 'Learn European Portuguese - Structured Lessons | Port-Chops',
   ogTitle: 'Learn Portuguese - Interactive Lessons',
@@ -74,6 +111,8 @@ useSeoMeta({
   ogDescription: 'Interactive Portuguese lessons organized by topic and difficulty level.',
   ogImage: '/og-learn.jpg',
 })
+
+const lessons = ref(lessonsIndex)
 
 const lessonCategories = [
   {

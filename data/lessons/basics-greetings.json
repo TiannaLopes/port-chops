@@ -1,0 +1,187 @@
+{
+  "lessonId": "basics-greetings-01",
+  "category": "Basics & Greetings",
+  "title": "Essential Greetings",
+  "slug": "essential-greetings",
+  "difficulty": "Beginner",
+  "estimatedTime": "15 min",
+  "description": "Learn how to greet people in Portuguese with common phrases for different times of day and situations.",
+  "objectives": [
+    "Master basic greeting phrases",
+    "Understand formal vs informal greetings",
+    "Learn proper pronunciation",
+    "Practice responding to greetings"
+  ],
+  "vocabulary": [
+    {
+      "portuguese": "Olá",
+      "english": "Hello",
+      "pronunciation": "oh-LAH",
+      "audioUrl": null,
+      "example": "Olá! Como está?",
+      "notes": "Universal greeting, works in all situations"
+    },
+    {
+      "portuguese": "Bom dia",
+      "english": "Good morning",
+      "pronunciation": "bom DEE-ah",
+      "audioUrl": null,
+      "example": "Bom dia, senhor Silva!",
+      "notes": "Used until noon"
+    },
+    {
+      "portuguese": "Boa tarde",
+      "english": "Good afternoon",
+      "pronunciation": "BOH-ah TAR-deh",
+      "audioUrl": null,
+      "example": "Boa tarde! Tudo bem?",
+      "notes": "Used from noon until evening (around 7pm)"
+    },
+    {
+      "portuguese": "Boa noite",
+      "english": "Good evening/Good night",
+      "pronunciation": "BOH-ah NOY-teh",
+      "audioUrl": null,
+      "example": "Boa noite e até amanhã!",
+      "notes": "Used after evening and when saying goodbye at night"
+    },
+    {
+      "portuguese": "Adeus",
+      "english": "Goodbye",
+      "pronunciation": "ah-DEH-oosh",
+      "audioUrl": null,
+      "example": "Adeus! Até logo!",
+      "notes": "Formal, implies you won't see the person for a while"
+    },
+    {
+      "portuguese": "Tchau",
+      "english": "Bye",
+      "pronunciation": "chow",
+      "audioUrl": null,
+      "example": "Tchau! Até amanhã!",
+      "notes": "Informal, casual goodbye"
+    },
+    {
+      "portuguese": "Até logo",
+      "english": "See you later",
+      "pronunciation": "ah-TEH LOH-goo",
+      "audioUrl": null,
+      "example": "Até logo! Boa tarde!",
+      "notes": "See you soon, casual"
+    },
+    {
+      "portuguese": "Como está?",
+      "english": "How are you? (formal)",
+      "pronunciation": "KOH-moo sh-TAH",
+      "audioUrl": null,
+      "example": "Bom dia! Como está?",
+      "notes": "Formal way to ask how someone is"
+    },
+    {
+      "portuguese": "Tudo bem?",
+      "english": "How are you? / Everything good?",
+      "pronunciation": "TOO-doo baym",
+      "audioUrl": null,
+      "example": "Olá! Tudo bem?",
+      "notes": "Informal, very common in everyday conversation"
+    },
+    {
+      "portuguese": "Obrigado/Obrigada",
+      "english": "Thank you",
+      "pronunciation": "oh-bree-GAH-doo / oh-bree-GAH-dah",
+      "audioUrl": null,
+      "example": "Obrigado pela ajuda!",
+      "notes": "Men say 'obrigado', women say 'obrigada'"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "Formal vs Informal",
+      "content": "Portuguese has different levels of formality. Use 'Como está?' with strangers, elderly people, or in professional settings. Use 'Tudo bem?' with friends, family, or people your age.",
+      "examples": [
+        "Formal: Bom dia, senhor. Como está?",
+        "Informal: Olá! Tudo bem?"
+      ]
+    },
+    {
+      "title": "Gender Agreement in 'Obrigado'",
+      "content": "When saying thank you, men say 'obrigado' and women say 'obrigada'. This is because you're saying 'I am obliged/grateful' and the adjective must match your gender.",
+      "examples": [
+        "Male speaker: Obrigado!",
+        "Female speaker: Obrigada!"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "What greeting would you use at 3:00 PM?",
+      "options": [
+        "Bom dia",
+        "Boa tarde",
+        "Boa noite",
+        "Adeus"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Boa tarde (Good afternoon) is used from noon until evening, around 7 PM."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which is the informal way to say goodbye?",
+      "options": [
+        "Adeus",
+        "Tchau",
+        "Bom dia",
+        "Como está?"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tchau is the casual, informal way to say bye. Adeus is more formal and implies a longer separation."
+    },
+    {
+      "type": "translation",
+      "question": "How do you say 'Good morning' in Portuguese?",
+      "correctAnswer": "Bom dia",
+      "acceptableAnswers": ["bom dia", "Bom dia"],
+      "explanation": "Bom dia means 'Good morning' and is used until noon."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "If you're a woman saying thank you, which do you say?",
+      "options": [
+        "Obrigado",
+        "Obrigada",
+        "Both are correct",
+        "Neither"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Women say 'obrigada' because the word is an adjective that must match the speaker's gender."
+    },
+    {
+      "type": "fill-in-blank",
+      "question": "Complete: Olá! ____ bem?",
+      "correctAnswer": "Tudo",
+      "acceptableAnswers": ["tudo", "Tudo"],
+      "explanation": "'Tudo bem?' is a common informal greeting meaning 'Everything good?' or 'How are you?'"
+    },
+    {
+      "type": "matching",
+      "question": "Match the Portuguese greetings with their English meanings:",
+      "pairs": [
+        { "portuguese": "Bom dia", "english": "Good morning" },
+        { "portuguese": "Boa tarde", "english": "Good afternoon" },
+        { "portuguese": "Boa noite", "english": "Good evening" },
+        { "portuguese": "Até logo", "english": "See you later" }
+      ]
+    }
+  ],
+  "culturalNotes": [
+    {
+      "title": "The Two-Kiss Greeting",
+      "content": "In Portugal, friends and family greet each other with two kisses on the cheek (starting with the right cheek). This is common in casual settings but not in formal business environments."
+    },
+    {
+      "title": "Using 'Senhor' and 'Senhora'",
+      "content": "When addressing someone formally, use 'senhor' (sir/Mr.) or 'senhora' (ma'am/Mrs.) followed by their last name. Example: 'Bom dia, Senhor Silva!'"
+    }
+  ]
+}

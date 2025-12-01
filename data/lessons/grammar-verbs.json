@@ -1,0 +1,191 @@
+{
+  "lessonId": "grammar-verbs-01",
+  "category": "Grammar Essentials",
+  "title": "Present Tense Regular Verbs",
+  "slug": "present-tense-regular-verbs",
+  "difficulty": "Intermediate",
+  "estimatedTime": "30 min",
+  "description": "Master the present tense conjugation of regular Portuguese verbs ending in -ar, -er, and -ir.",
+  "objectives": [
+    "Conjugate regular -ar verbs",
+    "Conjugate regular -er verbs",
+    "Conjugate regular -ir verbs",
+    "Use verbs in simple sentences"
+  ],
+  "vocabulary": [
+    {
+      "portuguese": "Falar",
+      "english": "To speak",
+      "pronunciation": "fah-LAR",
+      "example": "Eu falo português.",
+      "notes": "Regular -ar verb"
+    },
+    {
+      "portuguese": "Trabalhar",
+      "english": "To work",
+      "pronunciation": "trah-bah-LYAR",
+      "example": "Ela trabalha em Lisboa.",
+      "notes": "Regular -ar verb"
+    },
+    {
+      "portuguese": "Morar",
+      "english": "To live/reside",
+      "pronunciation": "moh-RAR",
+      "example": "Moro no Porto.",
+      "notes": "Regular -ar verb"
+    },
+    {
+      "portuguese": "Comer",
+      "english": "To eat",
+      "pronunciation": "koh-MEHR",
+      "example": "Comemos às duas.",
+      "notes": "Regular -er verb"
+    },
+    {
+      "portuguese": "Beber",
+      "english": "To drink",
+      "pronunciation": "beh-BEHR",
+      "example": "Bebo café todos os dias.",
+      "notes": "Regular -er verb"
+    },
+    {
+      "portuguese": "Viver",
+      "english": "To live",
+      "pronunciation": "vee-VEHR",
+      "example": "Vivemos em Portugal.",
+      "notes": "Regular -er verb"
+    },
+    {
+      "portuguese": "Partir",
+      "english": "To leave/depart",
+      "pronunciation": "par-TEER",
+      "example": "Parto amanhã.",
+      "notes": "Regular -ir verb"
+    },
+    {
+      "portuguese": "Abrir",
+      "english": "To open",
+      "pronunciation": "ah-BREER",
+      "example": "A loja abre às nove.",
+      "notes": "Regular -ir verb"
+    },
+    {
+      "portuguese": "Assistir",
+      "english": "To watch/attend",
+      "pronunciation": "ah-sees-TEER",
+      "example": "Assisto televisão.",
+      "notes": "Regular -ir verb"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "Regular -AR Verbs",
+      "content": "To conjugate -ar verbs, remove -ar and add: -o, -as, -a, -amos, -am. Example with 'falar' (to speak).",
+      "examples": [
+        "Eu falo (I speak)",
+        "Tu falas (You speak - informal)",
+        "Ele/Ela fala (He/She speaks)",
+        "Nós falamos (We speak)",
+        "Eles/Elas falam (They speak)"
+      ]
+    },
+    {
+      "title": "Regular -ER Verbs",
+      "content": "To conjugate -er verbs, remove -er and add: -o, -es, -e, -emos, -em. Example with 'comer' (to eat).",
+      "examples": [
+        "Eu como (I eat)",
+        "Tu comes (You eat)",
+        "Ele/Ela come (He/She eats)",
+        "Nós comemos (We eat)",
+        "Eles/Elas comem (They eat)"
+      ]
+    },
+    {
+      "title": "Regular -IR Verbs",
+      "content": "To conjugate -ir verbs, remove -ir and add: -o, -es, -e, -imos, -em. Example with 'partir' (to leave).",
+      "examples": [
+        "Eu parto (I leave)",
+        "Tu partes (You leave)",
+        "Ele/Ela parte (He/She leaves)",
+        "Nós partimos (We leave)",
+        "Eles/Elas partem (They leave)"
+      ]
+    },
+    {
+      "title": "Subject Pronouns",
+      "content": "Portuguese subject pronouns: Eu (I), Tu (you-informal), Ele/Ela (he/she), Nós (we), Eles/Elas (they). Pronouns are often omitted since the verb ending shows who is acting.",
+      "examples": [
+        "Falo português. (I speak Portuguese - 'Eu' is optional)",
+        "Moras em Lisboa? (Do you live in Lisbon?)",
+        "Trabalham muito. (They work a lot)"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "fill-in-blank",
+      "question": "Conjugate: Eu ____ português. (I speak Portuguese) - falar",
+      "correctAnswer": "falo",
+      "acceptableAnswers": ["falo", "Falo"],
+      "explanation": "'Falo' is the first person singular (eu) of 'falar'. Remove -ar, add -o."
+    },
+    {
+      "type": "fill-in-blank",
+      "question": "Conjugate: Nós ____ em Lisboa. (We live in Lisbon) - morar",
+      "correctAnswer": "moramos",
+      "acceptableAnswers": ["moramos", "Moramos"],
+      "explanation": "'Moramos' is the first person plural (nós) of 'morar'. Remove -ar, add -amos."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "What is the correct conjugation: Ela ____ café. (She drinks coffee)",
+      "options": [
+        "bebo",
+        "bebes",
+        "bebe",
+        "bebemos"
+      ],
+      "correctAnswer": 2,
+      "explanation": "'Bebe' is the third person singular (ela) of 'beber'. Remove -er, add -e."
+    },
+    {
+      "type": "fill-in-blank",
+      "question": "Conjugate: Eles ____ televisão. (They watch TV) - assistir",
+      "correctAnswer": "assistem",
+      "acceptableAnswers": ["assistem", "Assistem"],
+      "explanation": "'Assistem' is the third person plural (eles) of 'assistir'. Remove -ir, add -em."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which verb conjugation is correct: Tu ____ no Porto. (You live in Porto)",
+      "options": [
+        "moro",
+        "moras",
+        "mora",
+        "moram"
+      ],
+      "correctAnswer": 1,
+      "explanation": "'Moras' is the second person singular (tu) of 'morar'. Remove -ar, add -as."
+    },
+    {
+      "type": "matching",
+      "question": "Match the verb forms with their subjects:",
+      "pairs": [
+        { "portuguese": "falo", "english": "I (eu)" },
+        { "portuguese": "comes", "english": "you (tu)" },
+        { "portuguese": "vive", "english": "he/she (ele/ela)" },
+        { "portuguese": "partimos", "english": "we (nós)" }
+      ]
+    }
+  ],
+  "culturalNotes": [
+    {
+      "title": "Tu vs Você",
+      "content": "In European Portuguese, 'tu' (informal you) is very common among friends and family. 'Você' is more formal. In Brazil, 'você' is used much more frequently, even casually."
+    },
+    {
+      "title": "Dropping Pronouns",
+      "content": "Portuguese speakers often drop subject pronouns because the verb ending makes it clear who's acting. 'Falo português' (I speak Portuguese) is more natural than 'Eu falo português'."
+    }
+  ]
+}

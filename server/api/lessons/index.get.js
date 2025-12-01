@@ -1,30 +1,37 @@
-import { lessonOperations } from '../../utils/db'
+import lessonsIndex from '~/data/lessons/index.json'
 
 export default defineEventHandler(async (event) => {
   try {
     const query = getQuery(event)
-    const { category } = query
+    const { category, difficulty } = query
 
-    let lessons
+    let filteredLessons = lessonsIndex
 
+    // Filter by category if provided
     if (category) {
-      lessons = await lessonOperations.getLessonsByCategory(category)
-    } else {
-      lessons = await lessonOperations.getAllLessons()
+      filteredLessons = filteredLessons.filter(
+        lesson => lesson.category.toLowerCase() === category.toLowerCase()
+      )
     }
+
+    // Filter by difficulty if provided
+    if (difficulty) {
+      filteredLessons = filteredLessons.filter(
+        lesson => lesson.difficulty.toLowerCase() === difficulty.toLowerCase()
+      )
+    }
+
+    // Sort by order
+    filteredLessons.sort((a, b) => a.order - b.order)
 
     return {
       success: true,
-      lessons: lessons || [],
-      total: lessons.length
+      lessons: filteredLessons,
+      total: filteredLessons.length
     }
   } catch (error) {
     console.error('Get lessons error:', error)
     
-    if (error.statusCode) {
-      throw error
-    }
-
     throw createError({
       statusCode: 500,
       message: 'Failed to get lessons'

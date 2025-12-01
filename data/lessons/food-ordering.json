@@ -1,0 +1,181 @@
+{
+  "lessonId": "food-ordering-01",
+  "category": "Food & Dining",
+  "title": "Ordering at a Restaurant",
+  "slug": "ordering-at-restaurant",
+  "difficulty": "Beginner",
+  "estimatedTime": "25 min",
+  "description": "Learn essential phrases for ordering food and drinks at Portuguese restaurants, including how to ask for the menu, make requests, and pay the bill.",
+  "objectives": [
+    "Order food and drinks confidently",
+    "Ask questions about menu items",
+    "Make special requests",
+    "Ask for and pay the bill"
+  ],
+  "vocabulary": [
+    {
+      "portuguese": "A ementa",
+      "english": "The menu",
+      "pronunciation": "ah eh-MEN-tah",
+      "example": "Pode trazer a ementa, por favor?",
+      "notes": "In Brazil, they say 'o cardápio'"
+    },
+    {
+      "portuguese": "Queria",
+      "english": "I would like",
+      "pronunciation": "keh-REE-ah",
+      "example": "Queria um café, por favor.",
+      "notes": "Polite way to order"
+    },
+    {
+      "portuguese": "Para mim",
+      "english": "For me",
+      "pronunciation": "PAH-rah meem",
+      "example": "Para mim, uma sopa.",
+      "notes": "Used when ordering"
+    },
+    {
+      "portuguese": "A conta",
+      "english": "The bill",
+      "pronunciation": "ah KON-tah",
+      "example": "A conta, por favor.",
+      "notes": "How to ask for the check"
+    },
+    {
+      "portuguese": "Água",
+      "english": "Water",
+      "pronunciation": "AH-gwah",
+      "example": "Uma garrafa de água, por favor.",
+      "notes": "Specify 'com gás' (sparkling) or 'sem gás' (still)"
+    },
+    {
+      "portuguese": "Vinho",
+      "english": "Wine",
+      "pronunciation": "VEE-nyoo",
+      "example": "Um copo de vinho tinto.",
+      "notes": "'tinto' = red, 'branco' = white"
+    },
+    {
+      "portuguese": "Pão",
+      "english": "Bread",
+      "pronunciation": "pow",
+      "example": "Tem pão?",
+      "notes": "Often served with butter"
+    },
+    {
+      "portuguese": "Sobremesa",
+      "english": "Dessert",
+      "pronunciation": "soh-breh-MEH-zah",
+      "example": "Que sobremesas têm?",
+      "notes": "Important part of Portuguese meals"
+    },
+    {
+      "portuguese": "Recomenda",
+      "english": "Do you recommend",
+      "pronunciation": "heh-koh-MEN-dah",
+      "example": "O que recomenda?",
+      "notes": "Asking for recommendations"
+    },
+    {
+      "portuguese": "Bom apetite",
+      "english": "Enjoy your meal",
+      "pronunciation": "bom ah-peh-TEE-teh",
+      "example": "Bom apetite!",
+      "notes": "Said before eating"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "Using 'Queria' vs 'Quero'",
+      "content": "'Queria' (I would like) is more polite than 'Quero' (I want). Always use 'Queria' when ordering in restaurants to be courteous.",
+      "examples": [
+        "Polite: Queria uma sopa, por favor.",
+        "Direct: Quero uma sopa. (less polite)"
+      ]
+    },
+    {
+      "title": "Asking Questions",
+      "content": "To ask what something is or if they have something, use 'O que é...?' (What is...?) or 'Tem...?' (Do you have...?).",
+      "examples": [
+        "O que é bacalhau? (What is bacalhau?)",
+        "Tem vinho da casa? (Do you have house wine?)"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "How do you politely ask for the menu?",
+      "options": [
+        "Quero a ementa",
+        "A ementa, por favor",
+        "Dá-me a ementa",
+        "Ementa!"
+      ],
+      "correctAnswer": 1,
+      "explanation": "'A ementa, por favor' is the polite way to ask for the menu."
+    },
+    {
+      "type": "translation",
+      "question": "How do you say 'I would like a coffee' in Portuguese?",
+      "correctAnswer": "Queria um café",
+      "acceptableAnswers": ["Queria um café", "queria um café", "Queria um café, por favor"],
+      "explanation": "'Queria um café' means 'I would like a coffee' - the polite way to order."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "How do you ask for the bill?",
+      "options": [
+        "A ementa, por favor",
+        "A conta, por favor",
+        "Obrigado",
+        "Bom apetite"
+      ],
+      "correctAnswer": 1,
+      "explanation": "'A conta, por favor' means 'The bill, please'."
+    },
+    {
+      "type": "fill-in-blank",
+      "question": "Complete: ____ mim, uma sopa. (For me, a soup)",
+      "correctAnswer": "Para",
+      "acceptableAnswers": ["para", "Para"],
+      "explanation": "'Para mim' means 'for me' and is commonly used when ordering."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "What do you say to someone before they start eating?",
+      "options": [
+        "Obrigado",
+        "Adeus",
+        "Bom apetite",
+        "Boa noite"
+      ],
+      "correctAnswer": 2,
+      "explanation": "'Bom apetite' means 'Enjoy your meal' and is said before eating."
+    },
+    {
+      "type": "matching",
+      "question": "Match the Portuguese phrases with their English meanings:",
+      "pairs": [
+        { "portuguese": "A ementa", "english": "The menu" },
+        { "portuguese": "A conta", "english": "The bill" },
+        { "portuguese": "Água", "english": "Water" },
+        { "portuguese": "Sobremesa", "english": "Dessert" }
+      ]
+    }
+  ],
+  "culturalNotes": [
+    {
+      "title": "Couvert (Cover Charge)",
+      "content": "In Portuguese restaurants, bread, olives, and spreads are often brought to your table automatically. This is called 'couvert' and you'll be charged for it. You can refuse it if you don't want it."
+    },
+    {
+      "title": "Service and Tipping",
+      "content": "Service charge is usually included in Portuguese restaurants. Tipping is not obligatory but rounding up or leaving 5-10% for good service is appreciated."
+    },
+    {
+      "title": "Meal Times",
+      "content": "Lunch is typically served from 12:30-2:30 PM, and dinner from 7:30-10:00 PM. Many restaurants close between lunch and dinner service."
+    }
+  ]
+}

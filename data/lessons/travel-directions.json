@@ -1,0 +1,207 @@
+{
+  "lessonId": "travel-directions-01",
+  "category": "Travel & Directions",
+  "title": "Asking for Directions",
+  "slug": "asking-for-directions",
+  "difficulty": "Beginner",
+  "estimatedTime": "25 min",
+  "description": "Learn how to ask for and understand directions in Portuguese, navigate the city, and find your way around.",
+  "objectives": [
+    "Ask where places are located",
+    "Understand basic directions",
+    "Use location prepositions",
+    "Navigate using Portuguese signs"
+  ],
+  "vocabulary": [
+    {
+      "portuguese": "Onde",
+      "english": "Where",
+      "pronunciation": "ON-deh",
+      "example": "Onde fica a estação?",
+      "notes": "Essential question word"
+    },
+    {
+      "portuguese": "Fica",
+      "english": "Is located",
+      "pronunciation": "FEE-kah",
+      "example": "A biblioteca fica à esquerda.",
+      "notes": "From verb 'ficar'"
+    },
+    {
+      "portuguese": "Esquerda",
+      "english": "Left",
+      "pronunciation": "esh-KEHR-dah",
+      "example": "Vire à esquerda.",
+      "notes": "À esquerda = to the left"
+    },
+    {
+      "portuguese": "Direita",
+      "english": "Right",
+      "pronunciation": "dee-RAY-tah",
+      "example": "Vire à direita.",
+      "notes": "À direita = to the right"
+    },
+    {
+      "portuguese": "Em frente",
+      "english": "Straight ahead / In front",
+      "pronunciation": "aym FREN-teh",
+      "example": "Siga em frente.",
+      "notes": "Very common direction"
+    },
+    {
+      "portuguese": "Perto",
+      "english": "Near/Close",
+      "pronunciation": "PEHR-too",
+      "example": "É perto daqui?",
+      "notes": "Perto de = near to"
+    },
+    {
+      "portuguese": "Longe",
+      "english": "Far",
+      "pronunciation": "LON-zheh",
+      "example": "É muito longe?",
+      "notes": "Longe de = far from"
+    },
+    {
+      "portuguese": "Rua",
+      "english": "Street",
+      "pronunciation": "HOO-ah",
+      "example": "Qual é o nome da rua?",
+      "notes": "Feminine noun"
+    },
+    {
+      "portuguese": "Praça",
+      "english": "Square/Plaza",
+      "pronunciation": "PRAH-sah",
+      "example": "A praça principal.",
+      "notes": "City square"
+    },
+    {
+      "portuguese": "Estação",
+      "english": "Station",
+      "pronunciation": "esh-tah-SOW",
+      "example": "Onde fica a estação de metro?",
+      "notes": "Train or metro station"
+    },
+    {
+      "portuguese": "Paragem",
+      "english": "Bus stop",
+      "pronunciation": "pah-RAH-zhaym",
+      "example": "A paragem do autocarro.",
+      "notes": "In Brazil: ponto de ônibus"
+    },
+    {
+      "portuguese": "Atravessar",
+      "english": "To cross",
+      "pronunciation": "ah-trah-veh-SAR",
+      "example": "Atravesse a rua.",
+      "notes": "Cross the street"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "Using 'Ficar' for Location",
+      "content": "The verb 'ficar' means 'to be located' or 'to stay'. It's the most common way to ask where something is located.",
+      "examples": [
+        "Onde fica o museu? (Where is the museum?)",
+        "O hotel fica perto da praia. (The hotel is near the beach.)",
+        "A farmácia fica na esquina. (The pharmacy is on the corner.)"
+      ]
+    },
+    {
+      "title": "Prepositions of Location",
+      "content": "Common prepositions: em (in/at/on), à (to the), de (from/of), perto de (near), longe de (far from), ao lado de (next to).",
+      "examples": [
+        "à esquerda (to the left)",
+        "à direita (to the right)",
+        "ao lado do banco (next to the bank)",
+        "em frente à igreja (in front of the church)"
+      ]
+    },
+    {
+      "title": "Polite Commands (Imperative)",
+      "content": "Use the imperative form to give directions politely: Vire (turn), Siga (continue), Atravesse (cross).",
+      "examples": [
+        "Vire à esquerda. (Turn left.)",
+        "Siga em frente. (Continue straight.)",
+        "Atravesse a ponte. (Cross the bridge.)"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "How do you ask 'Where is the station?'",
+      "options": [
+        "Qual é a estação?",
+        "Onde fica a estação?",
+        "Como é a estação?",
+        "Quando é a estação?"
+      ],
+      "correctAnswer": 1,
+      "explanation": "'Onde fica a estação?' means 'Where is the station located?'"
+    },
+    {
+      "type": "translation",
+      "question": "How do you say 'Turn right'?",
+      "correctAnswer": "Vire à direita",
+      "acceptableAnswers": ["Vire à direita", "vire à direita", "Vira à direita"],
+      "explanation": "'Vire à direita' means 'Turn right'. 'Vire' is the imperative form."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "What does 'em frente' mean?",
+      "options": [
+        "To the left",
+        "To the right",
+        "Straight ahead",
+        "Behind"
+      ],
+      "correctAnswer": 2,
+      "explanation": "'Em frente' means 'straight ahead' or 'in front'. Very common in directions."
+    },
+    {
+      "type": "fill-in-blank",
+      "question": "Complete: É ____ daqui? (Is it far from here?)",
+      "correctAnswer": "longe",
+      "acceptableAnswers": ["longe", "Longe"],
+      "explanation": "'Longe' means 'far'. 'É longe daqui?' = 'Is it far from here?'"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "What is 'paragem' in European Portuguese?",
+      "options": [
+        "Parking",
+        "Park",
+        "Bus stop",
+        "Train station"
+      ],
+      "correctAnswer": 2,
+      "explanation": "'Paragem' means bus stop in European Portuguese. In Brazil, it's 'ponto de ônibus'."
+    },
+    {
+      "type": "matching",
+      "question": "Match the Portuguese direction words:",
+      "pairs": [
+        { "portuguese": "Esquerda", "english": "Left" },
+        { "portuguese": "Direita", "english": "Right" },
+        { "portuguese": "Perto", "english": "Near" },
+        { "portuguese": "Longe", "english": "Far" }
+      ]
+    }
+  ],
+  "culturalNotes": [
+    {
+      "title": "Portuguese Streets and Addresses",
+      "content": "Portuguese addresses list the street name, number, floor (andar), and side (esquerdo/direito). Example: Rua Augusta, 123, 2º andar direito (Augusta Street, 123, 2nd floor right)."
+    },
+    {
+      "title": "Asking for Help",
+      "content": "Portuguese people are generally very helpful with directions. Start with 'Desculpe' (Excuse me) and most people will gladly assist, even if your Portuguese isn't perfect."
+    },
+    {
+      "title": "Metro vs Autocarro",
+      "content": "In Lisbon and Porto, 'metro' is the subway system. 'Autocarro' is the bus. In Brazil, they say 'ônibus' for bus. Taxis and Uber are widely available in cities."
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "lessonId": "basics-days-time-01",
+  "category": "Basics & Greetings",
+  "title": "Days, Months, and Telling Time",
+  "slug": "days-months-time",
+  "difficulty": "Beginner",
+  "estimatedTime": "25 min",
+  "description": "Learn how to express days of the week, months of the year, and tell time in Portuguese.",
+  "objectives": [
+    "Name all days of the week",
+    "Say the months of the year",
+    "Tell time in Portuguese",
+    "Make appointments and schedules"
+  ],
+  "vocabulary": [
+    {
+      "portuguese": "Segunda-feira",
+      "english": "Monday",
+      "pronunciation": "seh-GOON-dah FAY-rah",
+      "example": "Trabalho na segunda-feira.",
+      "notes": "Literally 'second day'"
+    },
+    {
+      "portuguese": "Terça-feira",
+      "english": "Tuesday",
+      "pronunciation": "TEHR-sah FAY-rah",
+      "example": "A reunião é na terça-feira.",
+      "notes": "Literally 'third day'"
+    },
+    {
+      "portuguese": "Quarta-feira",
+      "english": "Wednesday",
+      "pronunciation": "KWAR-tah FAY-rah",
+      "example": "Vou ao médico na quarta.",
+      "notes": "Can be shortened to 'quarta'"
+    },
+    {
+      "portuguese": "Quinta-feira",
+      "english": "Thursday",
+      "pronunciation": "KEEN-tah FAY-rah",
+      "example": "Quinta à tarde.",
+      "notes": "Literally 'fifth day'"
+    },
+    {
+      "portuguese": "Sexta-feira",
+      "english": "Friday",
+      "pronunciation": "SESH-tah FAY-rah",
+      "example": "Sexta à noite saímos.",
+      "notes": "Literally 'sixth day'"
+    },
+    {
+      "portuguese": "Sábado",
+      "english": "Saturday",
+      "pronunciation": "SAH-bah-doo",
+      "example": "Vou à praia no sábado.",
+      "notes": "From Latin 'sabbatum'"
+    },
+    {
+      "portuguese": "Domingo",
+      "english": "Sunday",
+      "pronunciation": "doh-MEEN-goo",
+      "example": "Domingo é dia de descanso.",
+      "notes": "From Latin 'dominicus' (Lord's day)"
+    },
+    {
+      "portuguese": "Hoje",
+      "english": "Today",
+      "pronunciation": "OH-zheh",
+      "example": "Hoje é segunda-feira.",
+      "notes": "Very common word"
+    },
+    {
+      "portuguese": "Amanhã",
+      "english": "Tomorrow",
+      "pronunciation": "ah-mah-NYAH",
+      "example": "Amanhã vou trabalhar.",
+      "notes": "Used for near future"
+    },
+    {
+      "portuguese": "Ontem",
+      "english": "Yesterday",
+      "pronunciation": "ON-taym",
+      "example": "Ontem estava em casa.",
+      "notes": "Used for recent past"
+    },
+    {
+      "portuguese": "Hora",
+      "english": "Hour/Time",
+      "pronunciation": "OH-rah",
+      "example": "Que horas são?",
+      "notes": "Feminine noun"
+    },
+    {
+      "portuguese": "Meia",
+      "english": "Half",
+      "pronunciation": "MAY-ah",
+      "example": "São três e meia.",
+      "notes": "Used for half past the hour"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "Days of the Week Pattern",
+      "content": "Portuguese days (except Saturday and Sunday) follow a numbering pattern from segunda (second) to sexta (sixth) feira. This comes from religious tradition counting from Sunday.",
+      "examples": [
+        "Segunda-feira = Second day (Monday)",
+        "Terça-feira = Third day (Tuesday)",
+        "Quarta-feira = Fourth day (Wednesday)",
+        "Quinta-feira = Fifth day (Thursday)",
+        "Sexta-feira = Sixth day (Friday)"
+      ]
+    },
+    {
+      "title": "Telling Time - Singular vs Plural",
+      "content": "Use 'É' for one o'clock, 'São' for all other hours. Add 'e' for minutes past the hour, 'menos' for minutes before the hour.",
+      "examples": [
+        "É uma hora. (It's 1:00)",
+        "São duas horas. (It's 2:00)",
+        "São três e quinze. (It's 3:15)",
+        "São cinco e meia. (It's 5:30)",
+        "São sete menos dez. (It's 6:50 / ten to seven)"
+      ]
+    },
+    {
+      "title": "Using 'Em' with Days",
+      "content": "Use 'em' or contracted forms for 'on' a specific day. Masculine days use 'no', feminine use 'na'.",
+      "examples": [
+        "no sábado (on Saturday - masculine)",
+        "no domingo (on Sunday - masculine)",
+        "na segunda-feira (on Monday - feminine)",
+        "na sexta (on Friday)"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "What day comes after terça-feira?",
+      "options": [
+        "Segunda-feira",
+        "Quarta-feira",
+        "Quinta-feira",
+        "Sexta-feira"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Quarta-feira (Wednesday) comes after terça-feira (Tuesday)."
+    },
+    {
+      "type": "translation",
+      "question": "How do you say 'It's 3:30' in Portuguese?",
+      "correctAnswer": "São três e meia",
+      "acceptableAnswers": ["São três e meia", "são três e meia", "São 3 e meia"],
+      "explanation": "'São três e meia' means 'It's 3:30'. 'Meia' means half."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "What does 'hoje' mean?",
+      "options": [
+        "Yesterday",
+        "Today",
+        "Tomorrow",
+        "Tonight"
+      ],
+      "correctAnswer": 1,
+      "explanation": "'Hoje' means 'today'. It's one of the most common time words."
+    },
+    {
+      "type": "fill-in-blank",
+      "question": "Complete: ____ é segunda-feira. (Today is Monday)",
+      "correctAnswer": "Hoje",
+      "acceptableAnswers": ["hoje", "Hoje"],
+      "explanation": "'Hoje' means today. 'Hoje é segunda-feira' = 'Today is Monday'."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which is the correct way to say 'It's 1:00'?",
+      "options": [
+        "São uma hora",
+        "É uma hora",
+        "É um hora",
+        "São um hora"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For 1 o'clock, use the singular 'É uma hora'. For other hours, use 'São'."
+    },
+    {
+      "type": "matching",
+      "question": "Match the Portuguese days with English:",
+      "pairs": [
+        { "portuguese": "Sábado", "english": "Saturday" },
+        { "portuguese": "Domingo", "english": "Sunday" },
+        { "portuguese": "Segunda-feira", "english": "Monday" },
+        { "portuguese": "Sexta-feira", "english": "Friday" }
+      ]
+    }
+  ],
+  "culturalNotes": [
+    {
+      "title": "Work Week in Portugal",
+      "content": "The typical Portuguese work week is Monday to Friday. Shops and businesses may close for lunch (1-3pm). Many smaller shops close on Sunday, though tourist areas and shopping centers stay open."
+    },
+    {
+      "title": "Punctuality",
+      "content": "While Portuguese culture is generally relaxed, being on time for business meetings is important. Social gatherings may have more flexible timing. If invited to dinner at 8pm, arriving 15-20 minutes late is acceptable."
+    },
+    {
+      "title": "24-Hour Clock",
+      "content": "Portugal uses the 24-hour clock in official contexts (train times, TV schedules). In conversation, people use the 12-hour format. Context makes it clear if it's morning or afternoon."
+    }
+  ]
+}

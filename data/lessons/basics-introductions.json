@@ -1,0 +1,202 @@
+{
+  "lessonId": "basics-introductions-01",
+  "category": "Basics & Greetings",
+  "title": "Introducing Yourself",
+  "slug": "introducing-yourself",
+  "difficulty": "Beginner",
+  "estimatedTime": "20 min",
+  "description": "Learn how to introduce yourself in Portuguese, including your name, age, nationality, and profession.",
+  "objectives": [
+    "Say your name and ask others their names",
+    "State your age and nationality",
+    "Describe your profession",
+    "Use basic personal pronouns"
+  ],
+  "vocabulary": [
+    {
+      "portuguese": "Chamo-me",
+      "english": "My name is / I call myself",
+      "pronunciation": "SHAH-moo-meh",
+      "example": "Chamo-me Ana Silva.",
+      "notes": "Formal way to introduce yourself"
+    },
+    {
+      "portuguese": "Sou",
+      "english": "I am",
+      "pronunciation": "soh",
+      "example": "Sou português.",
+      "notes": "From the verb 'ser' (to be)"
+    },
+    {
+      "portuguese": "Tenho",
+      "english": "I have",
+      "pronunciation": "TEN-yoo",
+      "example": "Tenho vinte e cinco anos.",
+      "notes": "Used for age in Portuguese"
+    },
+    {
+      "portuguese": "Anos",
+      "english": "Years",
+      "pronunciation": "AH-noosh",
+      "example": "Tenho trinta anos.",
+      "notes": "Always plural with age"
+    },
+    {
+      "portuguese": "Nome",
+      "english": "Name",
+      "pronunciation": "NOH-meh",
+      "example": "Qual é o seu nome?",
+      "notes": "Masculine noun"
+    },
+    {
+      "portuguese": "Prazer",
+      "english": "Pleasure (to meet you)",
+      "pronunciation": "prah-ZEHR",
+      "example": "Muito prazer!",
+      "notes": "Used when meeting someone"
+    },
+    {
+      "portuguese": "Encantado/Encantada",
+      "english": "Delighted/Pleased to meet you",
+      "pronunciation": "en-kan-TAH-doo / en-kan-TAH-dah",
+      "example": "Encantado em conhecê-lo!",
+      "notes": "Men say encantado, women say encantada"
+    },
+    {
+      "portuguese": "Nacionalidade",
+      "english": "Nationality",
+      "pronunciation": "nah-see-oh-nah-lee-DAH-deh",
+      "example": "Qual é a sua nacionalidade?",
+      "notes": "Feminine noun"
+    },
+    {
+      "portuguese": "Profissão",
+      "english": "Profession/Occupation",
+      "pronunciation": "proh-fee-SOW",
+      "example": "Qual é a sua profissão?",
+      "notes": "Feminine noun"
+    },
+    {
+      "portuguese": "Estudante",
+      "english": "Student",
+      "pronunciation": "esh-too-DAN-teh",
+      "example": "Sou estudante de medicina.",
+      "notes": "Same form for masculine and feminine"
+    },
+    {
+      "portuguese": "Professor/Professora",
+      "english": "Teacher/Professor",
+      "pronunciation": "proh-feh-SOR / proh-feh-SOH-rah",
+      "example": "Ela é professora de inglês.",
+      "notes": "Gender changes based on person"
+    },
+    {
+      "portuguese": "Médico/Médica",
+      "english": "Doctor",
+      "pronunciation": "MEH-dee-koo / MEH-dee-kah",
+      "example": "Sou médico.",
+      "notes": "Gender changes based on person"
+    }
+  ],
+  "grammar": [
+    {
+      "title": "The Verb 'Ser' (To Be)",
+      "content": "The verb 'ser' is used for permanent characteristics like nationality, profession, and identity. Conjugation: Eu sou, Tu és, Ele/Ela é, Nós somos, Eles/Elas são.",
+      "examples": [
+        "Eu sou portuguesa. (I am Portuguese.)",
+        "Ele é médico. (He is a doctor.)",
+        "Nós somos estudantes. (We are students.)"
+      ]
+    },
+    {
+      "title": "Expressing Age",
+      "content": "In Portuguese, you 'have' years rather than 'are' years old. Use 'Tenho + number + anos'.",
+      "examples": [
+        "Tenho vinte anos. (I am 20 years old.)",
+        "Ela tem trinta e cinco anos. (She is 35 years old.)",
+        "Quantos anos tens? (How old are you?)"
+      ]
+    },
+    {
+      "title": "Gender Agreement in Professions",
+      "content": "Most professions change ending based on gender. Masculine typically ends in -o, feminine in -a. Some professions are invariable.",
+      "examples": [
+        "Masculine: médico, enfermeiro, advogado",
+        "Feminine: médica, enfermeira, advogada",
+        "Invariable: estudante, dentista, artista"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "How do you formally introduce yourself saying 'My name is Maria'?",
+      "options": [
+        "Sou Maria",
+        "Tenho Maria",
+        "Chamo-me Maria",
+        "Nome Maria"
+      ],
+      "correctAnswer": 2,
+      "explanation": "'Chamo-me Maria' is the formal way to say 'My name is Maria' or literally 'I call myself Maria'."
+    },
+    {
+      "type": "fill-in-blank",
+      "question": "Complete: ____ vinte e três anos. (I am 23 years old)",
+      "correctAnswer": "Tenho",
+      "acceptableAnswers": ["tenho", "Tenho"],
+      "explanation": "In Portuguese, you use 'tenho' (I have) to express age, not 'sou' (I am)."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "If you're a male saying 'Nice to meet you', which do you say?",
+      "options": [
+        "Encantada",
+        "Encantado",
+        "Obrigada",
+        "Prazer"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Men say 'encantado' (pleased to meet you). Women say 'encantada'."
+    },
+    {
+      "type": "translation",
+      "question": "How do you say 'I am Portuguese' (male speaker)?",
+      "correctAnswer": "Sou português",
+      "acceptableAnswers": ["Sou português", "sou português", "Eu sou português"],
+      "explanation": "'Sou português' means 'I am Portuguese' for a male speaker. A female would say 'Sou portuguesa'."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Which verb do you use to talk about your profession?",
+      "options": [
+        "Tenho",
+        "Estar",
+        "Sou",
+        "Vou"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Use 'ser' (sou) for professions because it's a permanent characteristic. Example: 'Sou professor'."
+    },
+    {
+      "type": "matching",
+      "question": "Match the Portuguese phrases with their English meanings:",
+      "pairs": [
+        { "portuguese": "Chamo-me", "english": "My name is" },
+        { "portuguese": "Tenho anos", "english": "I am years old" },
+        { "portuguese": "Sou", "english": "I am" },
+        { "portuguese": "Muito prazer", "english": "Nice to meet you" }
+      ]
+    }
+  ],
+  "culturalNotes": [
+    {
+      "title": "Formal vs Informal Introductions",
+      "content": "In formal situations, use 'Chamo-me' and the polite 'você'. With friends, you can say 'Eu sou' or just your name. Young people often skip formalities and jump straight to first names."
+    },
+    {
+      "title": "Handshakes and Kisses",
+      "content": "In business, a firm handshake is standard. Among friends and family, two kisses on the cheek (starting right) is common. Men typically shake hands with each other."
+    }
+  ]
+}
